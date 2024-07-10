@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+
+:root{
+    --color-primario:#F3F5FC;
+    --color-secundario:#081a41;
+    --color-terciario:gray;
+    --backgroundText: transparent;
+    --backgroundMessages: white;
+    --copyDecryptText: rgb(19,38,92);
+    --copyDecryptBackground: #D8DFE8;
+    --encryptText: white;
+    --encryptBackground: rgb(19,38,92);
+    --borderButton: rgb(19,38,92);
+    --borderState: ridge;
+    --fuente1:"Inter", sans serif;
+
+    
+}
+
+
+body{
+    background-color: var(--color-primario);
+    font-family: var(--fuente1);
+    transition: 1s;
+}
+
+header :focus{
+    outline-style: none;
+}
+
+.logo{
+    
+    content: var(--logo);
+    margin-top: 40px;
+    margin-left: 40px;
+
+}
+
+
+.content{
+    width: 90%;
+    margin: auto;
+}
+
+.text{
+    height: 50%;
+    margin: 2% auto 0;
+    display: inline-block;
+    font-size: 32px;
+    color: var(--color-secundario);
+    border: none;
+    background-color: var(--backgroundText) ;
+    resize: none;
+    transition: 1s;
+}
+
+textarea:focus{
+    outline: none !important;
+}
+
+::placeholder{
+    color: var(--color-secundario);
+    opacity: 0.5;
+}
+
+.messages{
+    float: right;
+    background-color: var(--backgroundMessages);
+    /*display: inline-block;*/
+    text-align: center;
+    width: 35%;
+    height: 90%;
+    vertical-align: top;
+    margin: 0 1.5%;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    border-radius: 32px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: 1s;
+}
+
+.messages img{
+    width: 80%;
+}
+
+#emptytxtimg{
+    visibility: visible;
+
+    -khtml-user-select: none;
+    -o-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.messages h2{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.messages p{
+    margin: 2%;
+    font-size: 16px;
+}
+
+#empty{
+    padding: 30px 20px;
+}
+
+#output{
+    width: 100%;
+    height: 90%;
+    font-size: 24px;
+    color: grey;
+    text-align: left;
+    visibility: visible;
+    background-color: var(--backgroundMessages);
+    display: none;
+}
+
+#noMsg{
+    visibility: visible;
+}
+
+#noMsgParagraph{
+    visibility: visible;
+}
+
+.copy {
+    margin: 2%;
+    width: 40%;
+    padding: 3% 0;
+    font-size: 16px;
+    border: var(--borderState);
+    color: var(--copyDecryptText);
+    background-color: var(--copyDecryptBackground);
+    border-radius: 15px;
+    border-width: thin;
+    border-color: var(--borderButton);
+    transition: 1s all;
+    cursor: pointer;
+    display: none;
+}
+
+.buttons {
+    display: block;
+}
+
+.buttons p{
+    font-size: 12px;
+    color: gray;
+    margin-bottom: 1%;
+}
+
+.encrypt {
+
+    margin: auto;
+    width: 20%;
+    padding: 1% 0;
+    font-size: 16px;
+    color: var(--encryptText);
+    border: none;
+    background-color: var(--encryptBackground);
+    border-radius: 15px;
+    transition: 1s all;
+    cursor: pointer;
+}
+
+
+.decrypt{
+    margin-left: 2%;
+    width: 20%;
+    padding: 1% 0;
+    font-size: 16px;
+    border: var(--borderState);
+    color: var(--copyDecryptText);
+    background-color: var(--copyDecryptBackground);
+    border-width: thin;
+    border-color: var(--borderButton);
+    border-radius: 15px;
+    transition: 1s all;
+    cursor: pointer;
+}
+
+.encrypt:hover, .decrypt:hover, .copy:hover{
+    background-color: var(--color-terciario);
+}
+
+footer{
+    text-align: center;
+    margin: 1%;
+    color: var(--color-secundario);
+    transition: 1s;
+}
+
+
+
+@media screen and (max-width:1024px){
+
+    .logo{
+        margin: 10% auto;
+    }
+
+
+    .text,.buttons{
+        display: block;
+        width: 100%;
+        margin: 5% auto;
+    }
+
+    #text{
+        height: 5em;
+    }
+
+    #output{
+        height: 5em;
+    }
+
+    .messages{
+        width: 100%;
+        float: none;
+        display: block;
+        margin: auto;
+    }
+
+    .empty{
+        padding-top: 3em;
+        padding-bottom: 3em;
+    }
+
+    .encrypt,.decrypt{
+        width: 45%;
+        margin: 2%;
+        padding: 2% 0;
+    }
+
+    .decrypt:hover, .copy:hover{
+        background-color: #D8DFE8;
+    }
+
+    .encrypt:hover{
+        background-color: var(--color-terciario);
+    }
+
+    #emptytxtimg{
+        display: none;
+    }
+}

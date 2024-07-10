@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es-co">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Encriptador</title>
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+
+    <body>
+        <header>
+            <img src="./assets/Logo.png" alt="logo-alura" class="logo">
+        </header>
+
+        <main class="content">
+            <textarea name="text" id="text" class="text" cols="35" rows="10" placeholder="Introduzca el texto aquí"></textarea>
+            
+            <div class="messages" id="messages">
+                
+                <section class="empty" id="empty">
+                    <h1>
+                        <img src="./assets/Muñeco.png" alt="empty-text-img" id="emptytxtimage">
+                    </h1>
+                    <h2 id="noMsg">
+                        Ningún mensaje fue encontrado
+                    </h2>
+                    <p id="noMsgParagraph">Ingrese el texto a encriptar o desencriptar</p>
+                </section>
+                <section>
+                    <textarea name="text" id="output" class="text" cols="50" rows="12"></textarea>
+                    <input type="submit" value="Copiar" class="copy" id="copy">
+                </section>
+            </div>
+            <section class="buttons">
+                <p>
+                    <img src="./assets/bi_exclamation-circle-fill.png" alt="alert"> Solo letras minúsculas y sin acento
+                </p>
+                <input type="submit" value="Encriptar" class="encrypt" id="encrypt"/>
+                <input type="submit" value="Desencriptar" class="decrypt" id="decrypt"/>
+            </section>
+
+        </main>
+        <footer>
+            <p>
+                Desarrollado por Sebastian Mendoza Brieva - 2024
+            </p>
+
+        </footer>
+        <script src="app.js"></script>
+    </body>
+</html>
